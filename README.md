@@ -30,8 +30,8 @@
  POST   | /users/login          | Log-in page                      |
 | POST   | /users                 | Sign-up page                 |
 |
-| DELETE | /users/:id             | Delete user        |
-|
+| DELETE    | /users/:id             |  Delete user       |
+
 
 ### Expense
 | Method | Path                   | Purpose                         |
