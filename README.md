@@ -29,7 +29,6 @@
 | GET    | /users/:id             | Get user profile info       |
  POST   | /users/login          | Log-in page                      |
 | POST   | /users                 | Sign-up page                 |
-|
 | DELETE    | /users/:id             |  Delete user       |
 
 
