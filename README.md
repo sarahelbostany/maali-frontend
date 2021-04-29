@@ -7,7 +7,7 @@
 ## Wireframe:
 <details>
 <summary>wireframes</summary>
-![1](./screenshots/maali1.png)
+!(./screenshots/maali1.png)
 ![1](./screenshots/maali2.png)
 </details>
 
