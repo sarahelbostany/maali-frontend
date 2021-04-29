@@ -37,8 +37,6 @@
 
 
 
-
-
 ## Database ERD:
 - see screenhots
 
