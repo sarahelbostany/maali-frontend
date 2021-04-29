@@ -1,15 +1,11 @@
 # maali
 
 ## overview:
-**Maali is expense tracking app to track all your daily expsenses to help you make better finanical decisions.
+- Maali is expense tracking app to track all your daily expsenses to help you make better finanical decisions.
 
 
 ## Wireframe:
-<details>
-<summary>wireframes</summary>
-![1](./screenshots/maali1.png)
-![1](./screenshots/maali2.png)
-</details>
+- See screenshots
 
 
 ## User stories:
@@ -44,9 +40,7 @@
 
 
 ## Database ERD:
-<details>
-![1](./screenshots/erd.png)
-</details>
+- see screenhots
 
 
 ## Frontend components tree:
