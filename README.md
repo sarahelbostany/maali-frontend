@@ -5,8 +5,7 @@
 
 
 ## Wireframe:
-- See screenshots
-
+- see screenshots
 
 ## User stories:
 - When I go to the App, I see a login and signup button
@@ -25,8 +24,8 @@
 | GET    | /users/:id             | Get user profile info       |
  POST   | /users/login          | Log-in page                      |
 | POST   | /users                 | Sign-up page                 |
-|
-| DELETE | /users/:id             | Delete user        |
+| DELETE    | /users/:id             |  Delete user       |
+
 
 ### Expense
 | Method | Path                   | Purpose                         |
