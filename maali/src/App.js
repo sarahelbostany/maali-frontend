@@ -1,23 +1,45 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Redirect } from 'react-router-dom'
+import axios from 'axios'
+import { useState , useEffect, useContext } from 'react'
+
+import Navbar from './components/Navbar'
+import Home from './pages/Home'
+import Signup from './pages/Signup'
+import Login from './pages/Login'
+import Overview from './pages/Overview'
+
 
 function App() {
+
+  const [ user, setUser ] = useState({})
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+
+      <Route
+        exact path ="/"
+        render={() =>
+           <Home />
+        }
+      />
+
+      <Route
+        path="/signup"
+        render={()=>
+          <Signup setUser={setUser}/>
+        }
+      />
+      
+      <Route
+        path="/login"
+        render={()=>
+          <Login setUser={setUser} />
+        }
+      />
+
+
+
     </div>
   );
 }
