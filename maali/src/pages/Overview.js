@@ -1,7 +1,18 @@
-const Overview = ()=>{
-    return(
+import Expense from '../components/Expense'
+
+const Overview = () => {
+    return (
         <div>
-            Overview page
+            Overview!
+
+        <Expense/>
+
+       <div>
+
+
+            </div>
+
+
         </div>
     )
 }

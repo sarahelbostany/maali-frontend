@@ -30,11 +30,18 @@ function App() {
           <Signup setUser={setUser}/>
         }
       />
-      
+
       <Route
         path="/login"
         render={()=>
           <Login setUser={setUser} />
+        }
+      />
+
+      <Route
+        path="/overview"
+        render={()=>
+          <Overview/>
         }
       />
 

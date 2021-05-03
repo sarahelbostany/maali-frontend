@@ -1,5 +1,7 @@
 import axios from 'axios'
 import { useState } from 'react'
+
+
 const Signup = (props)=> {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -7,8 +9,7 @@ const Signup = (props)=> {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        // console.log('you submitted signup')
-        axios.post(`${process.env.REACT_APP_BACKEND_URL}/users`,{ name, email, password})
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/users/create`,{ name, email, password})
         .then((response)=>{
             props.setUser(response.data.user)
             localStorage.setItem('userId', response.data.user.id)
@@ -26,20 +27,19 @@ const Signup = (props)=> {
             Signup page
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="new-name">Name:</label>
-                    <input id="new-name" value={name} onChange={(e)=>{setName(e.target.value)}} />
+                    <label htmlFor="new-name"></label>
+                    <input id="new-name" value={name} onChange={(e)=>{setName(e.target.value)}} placeholder ="Name" />
                 </div>
                 <div>
-                    <label htmlFor="new-email">Email:</label>
-                    <input id="new-email" value={email} onChange={(e)=>{setEmail(e.target.value)}} />
+                    <label htmlFor="new-email"></label>
+                    <input id="new-email" value={email} onChange={(e)=>{setEmail(e.target.value)}} placeholder="Email" />
                 </div>
                 <div>
-                    <label htmlFor="new-password">Password:</label>
-                    <input id="new-password" type="password" value={password} onChange={(e)=>{setPassword(e.target.value)}} />
+                    <label htmlFor="new-password"></label>
+                    <input id="new-password" type="password" value={password} onChange={(e)=>{setPassword(e.target.value)}} placeholder="Password"/>
                 </div>
-                <div>
-                    <input type="submit" value="Sign Up" />
-                </div>
+                <button className= "btn"> Signup </button>
+
             </form>
 
         </div>

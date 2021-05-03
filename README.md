@@ -30,9 +30,9 @@
 ### Expense
 | Method | Path                   | Purpose                         |
 |--------|------------------------|---------------------------------|
-| POST   | /brands/:id/save       | User can save expense input           |
-| PUT    | /users/:id/edit        | User can edit expense input      |
-| DELETE | /brands/:id/delete     | User can delete expense input    |
+| POST   | /user/:id/save       | User can save expense input           |
+| PUT    | /userr/:id/edit        | User can edit expense input      |
+| DELETE | /user/:id/delete     | User can delete expense input    |
 
 
 
