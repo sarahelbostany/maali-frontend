@@ -6,6 +6,7 @@ const Signup = (props)=> {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [budget, setBudget] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -37,6 +38,10 @@ const Signup = (props)=> {
                 <div>
                     <label htmlFor="new-password"></label>
                     <input id="new-password" type="password" value={password} onChange={(e)=>{setPassword(e.target.value)}} placeholder="Password"/>
+                </div>
+                <div>
+                    <label htmlFor="new-budget"></label>
+                    <input id="new-budget" type="budget" value={budget} onChange={(e)=>{setBudget(e.target.value)}} placeholder="Budget"/>
                 </div>
                 <button className= "btn"> Signup </button>
 

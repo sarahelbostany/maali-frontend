@@ -1,6 +1,6 @@
 import axios from 'axios'
-import { useState } from 'react'
-
+import { useState, useContext } from 'react'
+import { AppContext } from '../context/appContext'
 
 
 //budget + amount spent + amount left
@@ -20,6 +20,8 @@ import { useState } from 'react'
 const Expense = (props) => {
     const [newExpense, setNewExpense] = useState('')
     const [amount, setAmount] = useState([])
+    const { userState, fetchUser } = useContext(AppContext)
+    const [user, setUser] = userState
 
 
 const handleSubmit = (e) => {
@@ -35,13 +37,17 @@ const handleSubmit = (e) => {
         console.log(error);
     })
 
-
-
-
 }
 
-
     return(
+        <div>
+        <div className = "budgetfield">
+            <span>Budget: {user.budget}</span>
+            <span>Amount Left {user.total}</span>
+            <span>Total Spent {user.budget - user.total}</span>
+
+
+        </div>
         <div className = "addExpenseForm" >
             Add an Expense
         <form onSubmit= {handleSubmit}>
@@ -56,6 +62,7 @@ const handleSubmit = (e) => {
 
         </form>
 
+    </div>
     </div>
     )
 }

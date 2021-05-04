@@ -2,6 +2,7 @@ import './App.css';
 import { Route, Redirect } from 'react-router-dom'
 import axios from 'axios'
 import { useState , useEffect, useContext } from 'react'
+import { AppContext } from './context/appContext';
 
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
@@ -12,7 +13,10 @@ import Overview from './pages/Overview'
 
 function App() {
 
-  const [ user, setUser ] = useState({})
+  const { userState, fetchUser } = useContext(AppContext)
+  const [user, setUser] = userState
+  useEffect(fetchUser, [])
+  
   return (
     <div className="App">
       <Navbar />
